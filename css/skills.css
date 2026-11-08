@@ -1,0 +1,167 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS variables */
+:root {
+    --main-color: rgb(248, 246, 246);
+    --header-color: rgb(238, 232, 232);
+    --text-color: rgb(4, 4, 4);
+    --background-color: white;
+    --design-color: rgb(101, 9, 101);
+    --footer-color: rgb(245, 240, 240);
+    --footer-text-color: rgb(97, 96, 96);
+}
+
+/* general styles */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+main{
+    min-height: 100vh;
+}
+
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 4%;
+    background-color: var(--header-color);
+}
+
+.logo{
+    font-family: Impact;
+    font-weight: lighter;
+    font-size: clamp(15px, 3vw, 30px);
+    color: var(--design-color);
+}
+
+.navigation{
+    gap: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+    color: var(--design-color);
+}
+
+@media (max-width: 768px) {
+    .navigation{
+        flex-wrap: wrap;
+        gap: 20px;
+
+
+    }
+}
+
+.main-container{
+   width: 85%;
+   max-width: 1100px;
+   padding: 3%;
+
+   margin: 50px auto;
+
+   background-color: var(--main-color);
+
+   border: 0 solid #ddd;
+   border-radius: 5px;
+
+   box-shadow: 0 1px 8px rgba(56, 0, 49, 0.88);
+}
+
+.h2{
+    color: var(--design-color);
+    text-align: center;
+    font-size: clamp(15px, 2vw, 20px);
+}
+
+.skills-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%;
+    
+    margin: 1%;
+
+
+}
+
+.card{
+    border: 4px solid rgb(118, 8, 118);
+    border-radius: 10px;
+    padding: 3%;
+    margin: 3%;
+
+   
+}
+
+h3{
+    color: var(--design-color);
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+p{
+    font-size: clamp(12px, 2vw, 18);
+}
+
+@media (max-width: 768px) {
+    .skills-card{
+        grid-template-columns: 1fr;
+        gap: 1%;
+    }
+
+    h3{
+        margin-bottom: 0;
+    }
+    
+    p{
+        margin-top: 0;
+    }
+    
+    .main-container{
+        min-height: 100vh;
+        height: auto;
+        padding: 60px 5%;
+    }
+
+    .h2{
+        margin: 0%;
+    }
+}
+
+
+/* footer */
+.footer{
+    background-color: var(--footer-color);
+    padding: 5px 3%;
+    line-height: 2.0;
+    color: var(--footer-text-color);
+    margin: 0;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .footer{
+        padding: auto;
+        font-size: 12px;
+        font-weight: lighter;
+        line-height: 1.7;
+    }
+}
